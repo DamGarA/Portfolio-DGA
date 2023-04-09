@@ -1,0 +1,17 @@
+.butt {
+  text-decoration: none;
+  position: absolute;
+  top: 1vh;
+  right: 3vh;
+}
+
+.text {
+  color: #31e1f7;
+  font-size: 1vw;
+}
+
+@media screen and (max-width: 768px) {
+  .text {
+    font-size: 3vw;
+  }
+}

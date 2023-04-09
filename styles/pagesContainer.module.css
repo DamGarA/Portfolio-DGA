@@ -1,0 +1,11 @@
+.pages {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  position: relative;
+}
+
+.htmlStyles {
+  margin: 0px;
+  background-color: #400d51;
+}
