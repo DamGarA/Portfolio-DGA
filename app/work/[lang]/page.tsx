@@ -9,7 +9,7 @@ interface AboutProps {
   };
 }
 
-function Work({ params }: AboutProps) {
+function Work({ params }: AboutProps): JSX.Element {
   const { lang } = params;
   const [aboutLang, setAboutLang] = useState(lang);
 

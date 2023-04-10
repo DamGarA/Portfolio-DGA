@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import styles from "../styles/navigation.module.css";
-import links from "@/src/links";
 import Name from "./Name";
 import { useState } from "react";
 import linksEn from "../public/locales/en/links";
@@ -12,8 +11,7 @@ interface NavProps {
   langState: boolean;
 }
 
-function Navigation(props: NavProps) {
-  const { langState } = props;
+function Navigation({ langState }: NavProps): JSX.Element {
   const [activeNav, setActiveNav] = useState<boolean>(false);
   let typeLinks;
   let lang = "en";

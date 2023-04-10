@@ -5,8 +5,7 @@ interface NameProps {
   handleNav: () => void;
 }
 
-export default function Name(props: NameProps) {
-  const { handleNav } = props;
+function Name({ handleNav }: NameProps): JSX.Element {
   return (
     <Link href={"/"} className={styles.nameLink}>
       <div onClick={handleNav} className={styles.container}>
@@ -17,3 +16,5 @@ export default function Name(props: NameProps) {
     </Link>
   );
 }
+
+export default Name;

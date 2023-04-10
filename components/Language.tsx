@@ -5,7 +5,7 @@ import Navigation from "./Navigation";
 import Link from "next/link";
 import styles from "../styles/language.module.css";
 
-function Language() {
+function Language(): JSX.Element {
   const [langState, setLangState] = useState<boolean>(true);
   const handleLangState = (): void => {
     setLangState(!langState);
