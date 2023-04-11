@@ -1,6 +1,5 @@
 // import "./globals.css";
 
-import Navigation from "@/components/Navigation";
 import styles from "../styles/pagesContainer.module.css";
 import { Raleway } from "@next/font/google";
 import Language from "@/components/Language";
@@ -26,7 +25,9 @@ export default function RootLayout({
         <div className={raleWay.className}>
           <Language />
         </div>
-        <div className={raleWay.className}>{children}</div>
+        <div className={styles.children_container}>
+          <div className={raleWay.className}>{children}</div>
+        </div>
       </body>
     </html>
   );

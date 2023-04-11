@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  max-width: 100%;
+}
+
+.sub_letters {
+  color: white;
+  font-size: 9vh;
+  margin-bottom: 0;
+}
+
+.uppeCaseLetter {
+  color: #31e1f7;
+  font-size: 18vh;
+  margin-left: 3vw;
+  margin-bottom: 0vw;
+}
+
+.sub_p {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .sub_letters {
+    display: none;
+  }
+
+  .uppeCaseLetter {
+    margin-top: 10vw;
+  }
+
+  .sub_p {
+    color: white;
+    display: block;
+  }
+}
