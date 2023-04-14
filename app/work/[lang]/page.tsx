@@ -9,6 +9,10 @@ interface AboutProps {
   };
 }
 
+function sumar(a: number, b: number): number {
+  return a + b;
+}
+
 function Work({ params }: AboutProps): JSX.Element {
   const { lang } = params;
   const [aboutLang, setAboutLang] = useState(lang);

@@ -2,32 +2,41 @@
 
 import { motion } from "framer-motion";
 import styles from "../../styles/homeName.module.css";
-
-function renderCase(letter: string): JSX.Element {
-  return (
-    <motion.div
-      animate={{
-        y: "2vh",
-      }}
-      transition={{ ease: "easeOut", duration: 2 }}
-    >
-      <p className={styles.uppeCaseLetter}>{letter}</p>
-    </motion.div>
-  );
-}
+import { useFollowPointer } from "../../src/hooks/use-follow-pointer";
+import { useRef } from "react";
+import { AiOutlineAim } from "react-icons/ai";
+import { renderCase, renderSubLetter } from "@/src/functions/homeNameFunctions";
 
 function HomeName(): JSX.Element {
+  const ref = useRef(null);
+  let { x, y } = useFollowPointer(ref);
+  if (x > 1050) x = 1050;
+  if (x < 20) x = 20;
+  if (y > 80) y = 80;
   return (
-    <div>
+    <div className={styles.all_container}>
       <div className={styles.container}>
         {renderCase("D")}
-        <p className={styles.sub_letters}>amian</p>
+        {renderSubLetter("amian", 1, true)}
         {renderCase("G")}
-        <p className={styles.sub_letters}>arcia</p>
+        {renderSubLetter("arcia", 3, true)}
         {renderCase("A")}
-        <p className={styles.sub_letters}>breu</p>
+        {renderSubLetter("breu", 5, true)}
       </div>
-      <p className={styles.sub_p}>Damian Garcia Abreu</p>
+      {renderSubLetter("Damian Garcia Abreu", 3, false)}
+
+      <motion.div
+        ref={ref}
+        className={styles.div_movement}
+        animate={{ x, y }}
+        transition={{
+          type: "spring",
+          stiffness: 50,
+          restDelta: 0.001,
+        }}
+      >
+        <AiOutlineAim className={styles.movement} />
+      </motion.div>
     </div>
   );
 }

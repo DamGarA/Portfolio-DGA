@@ -7,8 +7,19 @@
 .fld_text {
   color: #d800a6;
   margin-left: 5vw;
-  margin-top: 2vh;
-  font-size: 2rem;
+  margin-top: 0vh;
+  font-size: 6vh;
+}
+
+.icon {
+  height: 15vh;
+  width: 15vh;
+  color: #ff7777;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 768px) {
