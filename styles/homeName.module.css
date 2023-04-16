@@ -1,5 +1,6 @@
 .all_container {
   align-items: center;
+  pointer-events: none;
 }
 
 .container {
@@ -9,19 +10,21 @@
   width: 100%;
   font-size: 6vw;
   height: 60vh;
+  pointer-events: none;
 }
 
 .sub_letters {
-  color: white;
   font-size: 1em;
   font-weight: bolder;
-  z-index: 1;
+  z-index: 3;
+  color: white;
 }
 
 .uppeCaseLetter {
   color: #31e1f7;
   font-size: 2.4em;
   margin-left: 3vw;
+  z-index: 2;
 }
 
 .sub_p {
@@ -32,13 +35,15 @@
   height: 20vh;
   width: 20vh;
   position: absolute;
+  pointer-events: none;
 }
 
 .movement {
   height: 10vh;
   width: 10vh;
-  opacity: 0.2;
+  opacity: 0.6;
   color: #ff7777;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -48,10 +53,12 @@
 
   .sub_letters {
     display: none;
+    font-size: 0.01vw;
   }
 
   .uppeCaseLetter {
     margin-top: 10vh;
+    margin-left: 8vw;
     font-size: 5em;
     margin-bottom: 5vh;
   }
@@ -66,5 +73,6 @@
 
   .container {
     height: 30%;
+    align-items: center;
   }
 }

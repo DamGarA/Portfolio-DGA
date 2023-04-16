@@ -14,10 +14,7 @@ import {
   DiVisualstudio,
   DiWindows,
   DiBootstrap,
-  DiChrome,
   DiCode,
-  DiDropbox,
-  DiFirefox,
   DiGitBranch,
   DiGitCommit,
   DiGitMerge,
@@ -27,7 +24,7 @@ import { motion } from "framer-motion";
 
 function HomeBackIcons(): JSX.Element {
   const randomNumber = (): number => {
-    const newNumber: number = Math.floor(Math.random() * 85);
+    const newNumber: number = Math.floor(Math.random() * 75);
     return newNumber === 0 ? 1 : newNumber;
   };
 
@@ -47,17 +44,14 @@ function HomeBackIcons(): JSX.Element {
     DiVisualstudio,
     DiWindows,
     DiBootstrap,
-    DiChrome,
     DiCode,
-    DiDropbox,
-    DiFirefox,
     DiGitBranch,
     DiGitCommit,
     DiGitMerge,
   ];
 
   return (
-    <>
+    <div className={styles.div_back_icons}>
       {techArr.map((Tec, index) => {
         const Icon = Tec;
         return (
@@ -65,7 +59,7 @@ function HomeBackIcons(): JSX.Element {
             key={index * randomNumber() * randomNumber()}
             initial={{ position: "absolute", top: 0, left: 0 }}
             animate={{
-              y: `${randomNumber()}vh`,
+              y: `-${randomNumber()}vh`,
               x: `${randomNumber()}vw`,
             }}
             transition={{ ease: "easeOut", duration: 2 }}
@@ -74,7 +68,7 @@ function HomeBackIcons(): JSX.Element {
           </motion.div>
         );
       })}
-    </>
+    </div>
   );
 }
 

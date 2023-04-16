@@ -2,13 +2,13 @@
   height: 35vh;
   display: flex;
   flex-direction: column;
-
   align-items: center;
+  justify-content: center;
 }
 
 .dga {
-  color: #d800a6;
-  font-size: 10vh;
+  color: #31e1f7;
+  font-size: 350%;
   margin-bottom: 0;
   font-weight: bolder;
   z-index: 3;
@@ -16,9 +16,9 @@
 
 .dga_back {
   position: absolute;
-  transform: translate3d(5px, 5px, 5px);
-  color: #31e1f7;
-  font-size: 10vh;
+  transform: translate3d(5px, -30px, 1px);
+  color: #d800a6;
+  font-size: 350%;
   margin-bottom: 0;
   font-weight: bolder;
   z-index: 2;
@@ -26,6 +26,7 @@
 
 .fsd {
   color: white;
+  text-align: center;
 }
 
 .nameLink {
