@@ -28,7 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "public/locales/en/links.js"
+    "public/locales/en/links.ts"
   ],
   "exclude": ["node_modules"]
 }

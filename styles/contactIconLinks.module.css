@@ -1,0 +1,25 @@
+.icon {
+  color: #ff7777;
+  height: 3vw;
+  width: 3vw;
+  pointer-events: auto;
+  margin-left: 1vw;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10vw;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    margin-top: 40vw;
+  }
+
+  .icon {
+    height: 10vw;
+    width: 10vw;
+    margin-left: 6vw;
+  }
+}

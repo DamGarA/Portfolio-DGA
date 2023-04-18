@@ -7,9 +7,10 @@
 
 .fld_text {
   color: #d800a6;
-  margin-left: 5vw;
-  margin-top: 0vh;
+  margin-left: 6vw;
+  margin-top: -8vh;
   font-size: 6vh;
+  text-shadow: 10px 10px 10px #000000;
 }
 
 .icon {
@@ -35,5 +36,10 @@
     left: 0vw;
     max-width: 100vw;
     text-align: center;
+  }
+
+  .fld_text {
+    margin-left: 0;
+    margin-top: 0;
   }
 }

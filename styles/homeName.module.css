@@ -16,15 +16,14 @@
 .sub_letters {
   font-size: 1em;
   font-weight: bolder;
-  z-index: 3;
   color: white;
 }
 
 .uppeCaseLetter {
-  color: #31e1f7;
   font-size: 2.4em;
+  text-shadow: 10px 10px 10px #000000;
+  color: #31e1f7;
   margin-left: 3vw;
-  z-index: 2;
 }
 
 .sub_p {
@@ -68,7 +67,6 @@
     display: block;
     font-size: 1.5em;
     text-align: center;
-    z-index: 1;
   }
 
   .container {

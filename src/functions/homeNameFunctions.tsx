@@ -13,6 +13,7 @@ function renderCase(letter: string): JSX.Element {
       animate={{
         y: "30%",
         x: "1vw",
+        zIndex: 0,
       }}
       transition={{ ease: "easeOut", duration: 2 }}
     >
@@ -27,7 +28,7 @@ function renderSubLetter(text: string, dur: number, css: boolean): JSX.Element {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.2 }}
-      animate={{ opacity: 1, scale: 1 }}
+      animate={{ opacity: 1, scale: 1, zIndex: 1 }}
       transition={{ duration: dur }}
     >
       <p className={css ? styles.sub_letters : styles.sub_p}>{text}</p>
