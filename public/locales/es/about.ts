@@ -1,12 +1,20 @@
 interface AboutTypes {
   aboutTitle: string;
-  aboutText: string;
+  [key: string]: string;
 }
 
 const aboutEs: AboutTypes = {
   aboutTitle: "Hola, soy Damian",
-  aboutText:
-    "Vivo en La Plata, Argentina. Tengo 32 años. Me egresé como Full Stack Developer de Henry en febrero del 2023",
+  aboutWho: "¿Quién soy?",
+  aboutWhoText: "Soy Full Stack Developer y rebvwbwebwbwebweb",
+  aboutStudy: "Estudio",
+  aboutStudyText: "Henry bootcamp",
+  aboutHobbies: "Hobbies",
+  aboutHobbiesText: "Música y vwervwerve",
+  aboutUbication: "Ubicación",
+  aboutUbicationText: "La Plata, Buenos Aires, Argentina",
+  aboutEnglish: "Inglés",
+  aboutEnglishText: "Lecture: C1, Listening: B1",
 };
 
 export default aboutEs;

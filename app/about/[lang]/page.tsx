@@ -4,6 +4,8 @@ import { useState } from "react";
 import styles from "../../../styles/about.module.css";
 import aboutEn from "@/public/locales/en/about";
 import aboutEs from "@/public/locales/es/about";
+import { Accordion } from "@chakra-ui/react";
+import renderAcordion from "@/src/functions/aboutFunctions";
 
 interface AboutProps {
   params: {
@@ -24,13 +26,15 @@ function About({ params }: AboutProps): JSX.Element {
           <p>{aboutEn.aboutTitle}</p>
         )}
       </h1>
-      <h3 className={styles.text}>
-        {aboutLang === "es" ? (
-          <p>{aboutEs.aboutText}</p>
-        ) : (
-          <p>{aboutEn.aboutText}</p>
-        )}
-      </h3>
+      <div className={styles.acordion}>
+        <Accordion>
+          {renderAcordion("aboutWho", "aboutWhoText", aboutLang)}
+          {renderAcordion("aboutUbication", "aboutUbicationText", aboutLang)}
+          {renderAcordion("aboutStudy", "aboutStudyText", aboutLang)}
+          {renderAcordion("aboutHobbies", "aboutHobbiesText", aboutLang)}
+          {renderAcordion("aboutEnglish", "aboutEnglishText", aboutLang)}
+        </Accordion>
+      </div>
     </div>
   );
 }
